@@ -3,7 +3,9 @@ package com.crm.qa.testcases;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -20,7 +22,7 @@ public class LoginPageTest extends TestBase{
 		super();
 	}
   
-	@BeforeMethod
+	@BeforeClass
 	public void setUp() throws IOException{
 		
 		intitialization();
@@ -30,7 +32,7 @@ public class LoginPageTest extends TestBase{
 	@Test(priority=1)
 	public void loginPageTitleTest(){
 	String title = loginPage.validateloginPageTitle();
-	Assert.assertEquals(title, "CRMPRO  - CRM software for customer relationship management, sales, and support.");
+	Assert.assertEquals(title, "CRMPRO - CRM software for customer relationship management, sales, and support.");
 		
 		
 	}
@@ -48,7 +50,7 @@ public class LoginPageTest extends TestBase{
 	}
 	
 	
-	 @AfterMethod
+	 @AfterClass
 	 public void tearDown(){
 		 driver.quit();
 	 }

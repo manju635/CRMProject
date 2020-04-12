@@ -21,7 +21,7 @@ public class TestBase {
 	public TestBase() throws IOException{ //constructor
 		try{
 			prop=new Properties();
-		FileInputStream ip =new FileInputStream("C:/Users/Yogesh Tyagi/workspace/FreeCrmTest/src/main/java/com/crm/qa/config/config.properties");
+		FileInputStream ip =new FileInputStream("C:/Users/Yogesh Tyagi/git/CRMProject/FreeCrmTest/src/main/java/com/crm/qa/config/config.properties");
 		
 		prop.load(ip);
 		}
@@ -41,7 +41,7 @@ public static void intitialization(){
 	String browserName=  prop.getProperty("browser");
 	if(browserName.equals("chrome")){
 		
-		System.setProperty("webdriver.chrome.driver", "C:/Users/Yogesh Tyagi/Downloads/chromedriver_win32" );
+		System.setProperty("webdriver.chrome.driver", "C:/Users/Yogesh Tyagi/Downloads/chromedriver_win32/chromedriver.exe" );
 		driver=new ChromeDriver();
 	}
 	else if(browserName.equals("firefox")){

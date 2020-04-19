@@ -1,6 +1,4 @@
-package com.crm.qa.testcases;
-
-import com.crm.qa.util.DBConnection;
+package com.crm.qa.util;
 
 public class DBConnectionTest {
 

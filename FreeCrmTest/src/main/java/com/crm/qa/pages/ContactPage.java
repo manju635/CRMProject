@@ -10,7 +10,12 @@ import com.crm.qa.base.TestBase;
 
 public class ContactPage extends TestBase{
 
-   @FindBy(xpath="//td[contains(text(),'Contacts')]")
+   public ContactPage() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+@FindBy(xpath="//td[contains(text(),'Contacts')]")
    WebElement contactlable;
    
   // @FindBy(xpath="//td[conatins(text(),'Contacts')]")
@@ -18,10 +23,7 @@ public class ContactPage extends TestBase{
 
 // initialize the page object
    
-   public ContactPage(){
-	   
-	   PageFactory.initElements(driver, this);
-   }
+
     public void verifyContactLavel(){
     	
     	

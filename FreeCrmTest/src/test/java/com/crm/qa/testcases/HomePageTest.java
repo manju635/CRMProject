@@ -53,7 +53,7 @@ public class HomePageTest extends TestBase {
 	@Test(priority=3)
 	public void verifyContactLinkTest() throws IOException{
 		testutil.switchToFrame();
-	 contactpage =	homepage.clickOnContactsLink();
+	    contactpage =	homepage.clickOnContactsLink();
 		
 	}
 	

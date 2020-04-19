@@ -52,6 +52,7 @@ public class LoginPageTest extends TestBase{
 	
 	 @AfterClass
 	 public void tearDown(){
+		 System.out.println("All Test Cases Ran Successfully");
 		 driver.quit();
 	 }
 }

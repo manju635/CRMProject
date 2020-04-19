@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.crm.qa.util.Testutil;
@@ -42,7 +43,13 @@ public static void intitialization(){
 	if(browserName.equals("chrome")){
 		
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Yogesh Tyagi/Downloads/chromedriver_win32/chromedriver.exe" );
-		driver=new ChromeDriver();
+		
+		ChromeOptions chromeoption = new ChromeOptions(); 
+		chromeoption.addArguments("--headless");
+		
+		driver=new ChromeDriver(chromeoption);
+		
+
 	}
 	else if(browserName.equals("firefox")){
 		System.setProperty("webdriver.gecko.driver", "C:/Users/Yogesh Tyagi/Downloads");
